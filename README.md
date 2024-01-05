@@ -1,5 +1,5 @@
 # Fast Dynamic 3D Object Generation from a Single-view Video
-### [[Paper]]() | [[Project]]()
+### [[Paper]]() | [[Project]](https://fudan-zvg.github.io/Efficient4D/)
 
 > [**Fast Dynamic 3D Object Generation from a Single-view Video**](),            
 > Zijie Pan, Zeyu Yang, [Xiatian Zhu](https://surrey-uplab.github.io/), [Li Zhang](https://lzrobots.github.io)  
