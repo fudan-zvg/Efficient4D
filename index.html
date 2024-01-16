@@ -5,39 +5,44 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XB3PR2Y1TQ"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
 
-    gtag('config', 'G-XB3PR2Y1TQ');
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-XB3PR2Y1TQ');
     </script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Efficient4D</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600' rel='stylesheet'
+          type='text/css'>
     <link rel="stylesheet" href="/assets/css/Highlight-Clean.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
 
-<!--    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/icon180.png">-->
-<!--    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon/icon32.png">-->
-<!--    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icon/icon16.png">-->
+    <!--    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/icon180.png">-->
+    <!--    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon/icon32.png">-->
+    <!--    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icon/icon16.png">-->
     <link rel="manifest" href="/site.webmanifest">
 
-    <meta property="og:site_name" content="Fast Dynamic 3D Object Generation from a Single-view Video" />
-    <meta property="og:type" content="video.other" />
-    <meta property="og:title" content="Fast Dynamic 3D Object Generation from a Single-view Video" />
-    <meta property="og:description" content="Fast Dynamic 3D Object Generation from a Single-view Video" />
-    <meta property="og:url" content="https://fudan-zvg.github.io/Efficient4D/" />
-<!--    <meta property="og:image" content="https://dreamfusion3d.github.io/assets/images/dreamfusion_samples.png" />-->
+    <meta property="og:site_name" content="Fast Dynamic 3D Object Generation from a Single-view Video"/>
+    <meta property="og:type" content="video.other"/>
+    <meta property="og:title" content="Fast Dynamic 3D Object Generation from a Single-view Video"/>
+    <meta property="og:description" content="Fast Dynamic 3D Object Generation from a Single-view Video"/>
+    <meta property="og:url" content="https://fudan-zvg.github.io/Efficient4D/"/>
+    <!--    <meta property="og:image" content="https://dreamfusion3d.github.io/assets/images/dreamfusion_samples.png" />-->
 
-    <meta property="article:publisher" content="https://fudan-zvg.github.io/Efficient4D/" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Fast Dynamic 3D Object Generation from a Single-view Video" />
-    <meta name="twitter:description" content="Fast Dynamic 3D Object Generation from a Single-view Video" />
-    <meta name="twitter:url" content="https://fudan-zvg.github.io/PGC-3D/" />
-<!--    <meta name="twitter:image" content="https://dreamfusion3d.github.io/assets/images/dreamfusion_samples.png" />-->
+    <meta property="article:publisher" content="https://fudan-zvg.github.io/Efficient4D/"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Fast Dynamic 3D Object Generation from a Single-view Video"/>
+    <meta name="twitter:description" content="Fast Dynamic 3D Object Generation from a Single-view Video"/>
+    <meta name="twitter:url" content="https://fudan-zvg.github.io/PGC-3D/"/>
+    <!--    <meta name="twitter:image" content="https://dreamfusion3d.github.io/assets/images/dreamfusion_samples.png" />-->
     <!-- <meta name="twitter:site" content="" /> -->
 
     <script src="assets/js/video_comparison.js"></script>
@@ -53,104 +58,119 @@
     <div class="container" style="max-width: 768px;">
         <div class="row authors">
             <div class="col-sm">
-                <h5 class="text-center">Zijie Pan<sup>1</sup>, Zeyu Yang<sup>1</sup>, Xiatian Zhu<sup>2</sup>, Li Zhang<sup>1</sup></h5>
-                <h6 class="text-center"><sup>1</sup>Fudan University  <sup>2</sup>University of Surrey</h6>
+                <h5 class="text-center">Zijie Pan<sup>1</sup>, Zeyu Yang<sup>1</sup>, Xiatian Zhu<sup>2</sup>, Li
+                    Zhang<sup>1</sup></h5>
+                <h6 class="text-center"><sup>1</sup>Fudan University <sup>2</sup>University of Surrey</h6>
             </div>
         </div>
     </div>
-    </div>
+</div>
 
 <div class="container" style="max-width: 768px;">
-        <div class="row">
-            <div class="col-md-12">
-                <h5 class="text-center"> <a href="https://github.com/fudan-zvg/Efficient4D">Paper</a> | <a href="https://github.com/fudan-zvg/Efficient4D">Github</a>  </h5>
-            </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h5 class="text-center"><a href="https://github.com/fudan-zvg/Efficient4D">Paper</a> | <a
+                    href="https://github.com/fudan-zvg/Efficient4D">Github</a></h5>
         </div>
     </div>
+</div>
 
-<hr class="divider" />
-    <div class="container" style="max-width: 768px;">
-        <div class="row">
-            <div class="col-md-12">
-                    <h2 class="title is-3">
-                        <center>Abstract</center>
-                    </h2>
-                <p>
-                    <!-- <strong> -->
-                    Generating dynamic three-dimensional (3D) object from a single-view video is challenging due to the lack of 4D labeled data.
-                    Existing methods extend text-to-3D pipelines by transferring off-the-shelf image generation models such as score distillation sampling, but they are slow and expensive to scale (e.g., 150 minutes per object) due to the need for back-propagating the information-limited supervision signals through a large pretrained model.
-                    To address this limitation, we propose an efficient video-to-4D object generation framework called Efficient4D.
-                    It generates high-quality spacetime-consistent images under different camera views, and then uses them as labeled data to directly train a novel 4D Gaussian splatting model with explicit point cloud geometry, enabling real-time rendering under continuous camera trajectories.
-                    Extensive experiments on synthetic and real videos show that Efficient4D offers a remarkable 10-fold increase in speed when compared to prior art alternatives while preserving the same level of innovative view synthesis quality. For example, Efficient4D takes only 14 minutes to model a dynamic object.
-                </p>
-            </div>
+<hr class="divider"/>
+<div class="container" style="max-width: 768px;">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="title is-3">
+                <center>Abstract</center>
+            </h2>
+            <p>
+                <!-- <strong> -->
+                Generating dynamic three-dimensional (3D) object from a single-view video is challenging due to the lack
+                of 4D labeled data.
+                Existing methods extend text-to-3D pipelines by transferring off-the-shelf image generation models such
+                as score distillation sampling, but they are slow and expensive to scale (e.g., 150 minutes per object)
+                due to the need for back-propagating the information-limited supervision signals through a large
+                pretrained model.
+                To address this limitation, we propose an efficient video-to-4D object generation framework called
+                Efficient4D.
+                It generates high-quality spacetime-consistent images under different camera views, and then uses them
+                as labeled data to directly train a novel 4D Gaussian splatting model with explicit point cloud
+                geometry, enabling real-time rendering under continuous camera trajectories.
+                Extensive experiments on synthetic and real videos show that Efficient4D offers a remarkable 10-fold
+                increase in speed when compared to prior art alternatives while preserving the same level of innovative
+                view synthesis quality. For example, Efficient4D takes only 14 minutes to model a dynamic object.
+            </p>
         </div>
     </div>
+</div>
 
-<hr class="divider" />
-    <div class="container" style="max-width: 768px;">
-        <div class="row">
-            <div class="col-md-12">
-                    <h2 class="title is-3">
-                        <center>Method</center>
-                    </h2>
-            </div>
+<hr class="divider"/>
+<div class="container" style="max-width: 768px;">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="title is-3">
+                <center>Method</center>
+            </h2>
         </div>
     </div>
-        <div class="container" style="max-width: 768px;">
-            <div class="row">
-                <div class="col-md-12">
-                    <p>
-    Given as the input a brief video depicting a dynamic object from a single view,
-    our model aims to generate this object with geometrical and temporal consistency under any specific view and time.
-    Efficient4D comprises two components:
-    (A) Image sequence synthesis across views and timestamps, resulting in (c) an image matrix
-    where each row consists of multi-view geometrically consistent images
-    and each column consists of view-specific temporally consistent images.
-    (B) A novel 4D Gaussian representation model (d) that represents the scene with a number of Gaussian points.
-    It can be trained efficiently and robustly under the confidence-aware (e) supervision on the generated image matrix.
-                    </p>
-                </div>
-            </div>
+</div>
+<div class="container" style="max-width: 768px;">
+    <div class="row">
+        <div class="col-md-12">
+            <p>
+                Given as the input a brief video depicting a dynamic object from a single view,
+                our model aims to generate this object with geometrical and temporal consistency under any specific view
+                and time.
+                Efficient4D comprises two components:
+                (A) Image sequence synthesis across views and timestamps, resulting in (c) an image matrix
+                where each row consists of multi-view geometrically consistent images
+                and each column consists of view-specific temporally consistent images.
+                (B) A novel 4D Gaussian representation model (d) that represents the scene with a number of Gaussian
+                points.
+                It can be trained efficiently and robustly under the confidence-aware (e) supervision on the generated
+                image matrix.
+            </p>
         </div>
+    </div>
+</div>
 
 <div class="container" style="max-width: 768px;">
     <div class="row">
 
-            <figure>
-                <center>
+        <figure>
+            <center>
                 <img src="assets\images\pipeline.png" alt="Pipeline" width="100%">
-                </center>
-            </figure>
-        </div>
+            </center>
+        </figure>
+    </div>
 
 </div>
 
-<hr class="divider" />
+<hr class="divider"/>
 <div class="container" style="max-width: 768px;">
-        <div class="row">
-            <div class="col-md-12">
-                <h2 class="title is-3">
-                    <center>Video</center>
-                </h2>
-                <video class="video lazy" loop controls playsinline style="width: 100%">
-                    <source
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="title is-3">
+                <center>Video</center>
+            </h2>
+            <video class="video lazy" loop controls playsinline style="width: 100%">
+                <source
                         src="assets\video\demo.mp4"
                         type="video/mp4">
-                </video>
-            </div>
+            </video>
         </div>
     </div>
+</div>
 
- <!-- citing -->
-  <div class="container">
+<!-- citing -->
+<hr class="divider"/>
+<div class="container">
     <div class="row ">
-      <div class="col-12">
-          <h3>
-              Citation
-          </h3>
-<!--         <hr style="margin-top:0px">-->
-              <pre style="background-color: #e9eeef;padding: 1.25em 1.5em">
+        <div class="col-12">
+            <h3>
+                BibTex
+            </h3>
+            <!--         <hr style="margin-top:0px">-->
+            <pre style="background-color: #e9eeef;padding: 1.25em 1.5em">
 <code>@article{pan2024fast,
   title={Fast Dynamic 3D Object Generation from a Single-view Video},
   author={Pan, Zijie and Yang, Zeyu and Zhu, Xiatian and Zhang, Li},
@@ -159,10 +179,10 @@
 }
 </code>
               </pre>
-<!--          </hr>-->
-      </div>
+            <!--          </hr>-->
+        </div>
     </div>
-  </div>
+</div>
 
 </body>
 
