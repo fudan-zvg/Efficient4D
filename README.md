@@ -1,5 +1,5 @@
 # Fast Dynamic 3D Object Generation from a Single-view Video
-### [[Paper]]() | [[Project]](https://fudan-zvg.github.io/Efficient4D/)
+### [[Paper]](http://arxiv.org/abs/2401.08742) | [[Project]](https://fudan-zvg.github.io/Efficient4D/)
 
 > [**Fast Dynamic 3D Object Generation from a Single-view Video**](),            
 > Zijie Pan, Zeyu Yang, [Xiatian Zhu](https://surrey-uplab.github.io/), [Li Zhang](https://lzrobots.github.io)  
@@ -22,7 +22,7 @@ If you find our repository useful, please consider giving it a star ⭐ and citi
 @article{pan2024fast,
   title={Fast Dynamic 3D Object Generation from a Single-view Video},
   author={Pan, Zijie and Yang, Zeyu and Zhu, Xiatian and Zhang, Li},
-  journal={arXiv preprint arXiv xxxxxx},
+  journal={arXiv preprint arXiv 2401.08742},
   year={2024}
 }
 ```
