@@ -1,0 +1,11 @@
+.idea
+training_examples
+objaverse_examples
+ldm/__pycache__/
+recon_data/
+output/
+raymarching
+renderer
+testset/
+validation_set/
+
