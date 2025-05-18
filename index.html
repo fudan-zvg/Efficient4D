@@ -84,20 +84,22 @@
             </h2>
             <p>
                 <!-- <strong> -->
-                Generating dynamic three-dimensional (3D) object from a single-view video is challenging due to the lack
-                of 4D labeled data.
-                Existing methods extend text-to-3D pipelines by transferring off-the-shelf image generation models such
-                as score distillation sampling, but they are slow and expensive to scale (e.g., 150 minutes per object)
-                due to the need for back-propagating the information-limited supervision signals through a large
-                pretrained model.
-                To address this limitation, we propose an efficient video-to-4D object generation framework called
-                Efficient4D.
-                It generates high-quality spacetime-consistent images under different camera views, and then uses them
-                as labeled data to directly train a novel 4D Gaussian splatting model with explicit point cloud
-                geometry, enabling real-time rendering under continuous camera trajectories.
-                Extensive experiments on synthetic and real videos show that Efficient4D offers a remarkable 10-fold
-                increase in speed when compared to prior art alternatives while preserving the same level of innovative
-                view synthesis quality. For example, Efficient4D takes only 14 minutes to model a dynamic object.
+                Generating dynamic 3D object from a single-view video is challenging due to the lack of 4D labeled data.
+                An intuitive approach is to extend previous image-to-3D pipelines by
+                transferring off-the-shelf image generation models such as score distillation sampling.
+                However, this approach would be slow and expensive to scale due to the need for
+                back-propagating the information-limited supervision signals through a large pretrained model.
+                To address this, we propose an efficient video-to-4D object generation framework called Efficient4D.
+                It generates high-quality spacetime-consistent images under different camera views, and then uses
+                them as labeled data to directly reconstruct the 4D content through a 4D Gaussian splatting model.
+                Importantly, our method can achieve real-time rendering under continuous camera trajectories.
+                To enable robust reconstruction under sparse views, we introduce inconsistency-aware
+                confidence-weighted loss design, along with a lightly weighted score distillation loss.
+                Extensive experiments on both synthetic and real videos show that Efficient4D offers
+                a remarkable 10-fold increase in speed when compared to prior art alternatives
+                while preserving the quality of novel view synthesis.
+                For example, Efficient4D takes only 10 minutes to model a dynamic object,
+                vs 120 minutes by the previous art model Consistent4D.
             </p>
         </div>
     </div>
@@ -117,17 +119,15 @@
     <div class="row">
         <div class="col-md-12">
             <p>
-                Given as the input a brief video depicting a dynamic object from a single view,
-                our model aims to generate this object with geometrical and temporal consistency under any specific view
-                and time.
+                Given as the input (a) a brief video depicting a dynamic object from a single perspectives,
+                our model aims to generate this object with geometrical and temporal consistency under any
+                specific view and time.
                 Efficient4D comprises two components:
-                (A) Image sequence synthesis across views and timestamps, resulting in (c) an image matrix
-                where each row consists of multi-view geometrically consistent images
+                (A) Image sequence synthesis through (b) time-synchronous spatial volumes, resulting in
+                (c) an image matrix where each row consists of multi-view geometrically consistent images
                 and each column consists of view-specific temporally consistent images.
-                (B) A novel 4D Gaussian representation model (d) that represents the scene with a number of Gaussian
-                points.
-                It can be trained efficiently and robustly under the confidence-aware (e) supervision on the generated
-                image matrix.
+                (B) 4D Reconstruction using the generated images in (A). The 4D Gaussian representation can be
+                trained efficiently and robustly under the confidence-weighted loss and the low-weighted SDS loss.
             </p>
         </div>
     </div>
@@ -160,6 +160,114 @@
         </div>
     </div>
 </div>
+
+<hr class="divider"/>
+<div class="container" style="max-width: 768px;">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="title is-3">
+                <center>More Gaussian results</center>
+            </h2>
+        </div>
+    </div>
+</div>
+
+<div class="container" style="max-width: 768px;">
+    <div class="row">
+            <div class="col">
+                <figure>
+                    <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
+                        <source src="assets/video/deforming_toy_rabbit.mp4"
+                                type="video/mp4">
+                    </video>
+                </figure>
+            </div>
+            <div class="col">
+                <figure>
+                    <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
+                        <source src="assets/video/feeding_squirrel.mp4"
+                                type="video/mp4">
+                    </video>
+                </figure>
+            </div>
+        </div>
+
+    <div class="row">
+            <div class="col">
+                <figure>
+                    <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
+                        <source src="assets/video/looking_around_jack_russell.mp4"
+                                type="video/mp4">
+                    </video>
+                </figure>
+            </div>
+            <div class="col">
+                <figure>
+                    <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
+                        <source src="assets/video/looking_up_kitten.mp4"
+                                type="video/mp4">
+                    </video>
+                </figure>
+            </div>
+        </div>
+
+    <div class="row">
+            <div class="col">
+                <figure>
+                    <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
+                        <source src="assets/video/firing_pistol.mp4"
+                                type="video/mp4">
+                    </video>
+                </figure>
+            </div>
+            <div class="col">
+                <figure>
+                    <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
+                        <source src="assets/video/pecking_blue_jay.mp4"
+                                type="video/mp4">
+                    </video>
+                </figure>
+            </div>
+        </div>
+
+    <div class="row">
+            <div class="col">
+                <figure>
+                    <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
+                        <source src="assets/video/swimming_guppie.mp4"
+                                type="video/mp4">
+                    </video>
+                </figure>
+            </div>
+            <div class="col">
+                <figure>
+                    <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
+                        <source src="assets/video/swimming_yellow_tang.mp4"
+                                type="video/mp4">
+                    </video>
+                </figure>
+            </div>
+        </div>
+
+    <div class="row">
+            <div class="col">
+                <figure>
+                    <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
+                        <source src="assets/video/walking_siamese_cat.mp4"
+                                type="video/mp4">
+                    </video>
+                </figure>
+            </div>
+            <div class="col">
+                <figure>
+                    <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
+                        <source src="assets/video/blooming_tulip.mp4"
+                                type="video/mp4">
+                    </video>
+                </figure>
+            </div>
+        </div>
+    </div>
 
 <!-- citing -->
 <hr class="divider"/>
