@@ -3,7 +3,7 @@
 
 > [**Efficient4D: Fast Dynamic 3D Object Generation from a Single-view Video**](),            
 > Zijie Pan, Zeyu Yang, [Xiatian Zhu](https://surrey-uplab.github.io/), [Li Zhang](https://lzrobots.github.io)  
-> **Arxiv preprint**
+> **IJCV 2026**
 
 **Official implementation of "Efficient4D: Fast Dynamic 3D Object Generation from a Single-view Video".** 
 
@@ -79,9 +79,7 @@ bash run.sh walking_white_faced_egret walking_white_faced_egret 4,5,6,7 16 0
 ```
 
 ### 4D reconstruction
-Now the preview videos are under `output/DATA_NAME/preview` and the data for reconstruction are under `./recon_data/DATA_NAME`, please following [4DGS](https://github.com/fudan-zvg/4d-gaussian-splatting) for reconstruction. 
-Currently, the confidence map is not integrated into the 4DGS repo, we are trying to organize the simplified code in this repo.
-If the generated images have sufficient consistency with some seed, feel free to ignore it.
+We have now released the 4D reconstruction part under the `generation branch` of [4DGS](https://github.com/fudan-zvg/4d-gaussian-splatting/tree/generation). The branch provides a general framework combining 4DGS and SDS loss, which supports taking multi-view images as input (e.g., this repo, [Diffusion^2](https://github.com/fudan-zvg/diffusion-square) and [SV4D](https://github.com/Stability-AI/generative-models)).
 
 ## Acknowledgement
 
@@ -99,7 +97,7 @@ If you find our repository useful, please consider giving it a star ⭐ and citi
 @article{pan2024efficient4d,
   title={Efficient4D: Fast Dynamic 3D Object Generation from a Single-view Video},
   author={Pan, Zijie and Yang, Zeyu and Zhu, Xiatian and Zhang, Li},
-  journal={arXiv preprint arXiv 2401.08742},
-  year={2024}
+  journal={International Journal of Computer Vision},
+  year={2026},
 }
 ```
